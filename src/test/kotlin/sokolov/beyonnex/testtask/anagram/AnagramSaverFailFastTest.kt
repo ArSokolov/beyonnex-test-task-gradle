@@ -1,7 +1,11 @@
+package sokolov.beyonnex.testtask.anagram
+
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Nested
+import sokolov.beyonnex.testtask.anagram.AnagramRepoInMemory
+import sokolov.beyonnex.testtask.anagram.AnagramSaverFailFast
 
 class AnagramSaverFailFastTest {
 

@@ -1,8 +1,11 @@
+package sokolov.beyonnex.testtask
+
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
+import sokolov.beyonnex.testtask.CoreApp
 
 class CoreAppTest {
 

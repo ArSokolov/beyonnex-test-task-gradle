@@ -1,3 +1,5 @@
+package sokolov.beyonnex.testtask.anagram
+
 import java.util.HashMap
 
 class AnagramSaverFailFast(private val anagramRepo: AnagramRepo) : AnagramSaver {

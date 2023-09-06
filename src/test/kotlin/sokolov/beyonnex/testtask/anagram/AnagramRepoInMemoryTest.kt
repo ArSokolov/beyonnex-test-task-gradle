@@ -1,3 +1,5 @@
+package sokolov.beyonnex.testtask.anagram
+
 import io.kotest.matchers.collections.shouldBeEmpty
 import io.kotest.matchers.collections.shouldContainExactly
 import io.kotest.matchers.collections.shouldNotContain

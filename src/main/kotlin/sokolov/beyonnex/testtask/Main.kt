@@ -1,4 +1,9 @@
-import java.util.HashMap
+package sokolov.beyonnex.testtask
+
+import beyonnex.sokolov.plugins.*
+import io.ktor.server.application.*
+import io.ktor.server.engine.*
+import io.ktor.server.netty.*
 
 /*
 Write a Java/Kotlin program that provides these 2 features:
@@ -19,14 +24,16 @@ Feel free to use your favorite:
 - You can prioritize however you like (performance, readability, extensibility,…).
 */
 
-
-// TODO: docs/intro + corner cases
-
-fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
+        .start(wait = true)
 }
+
+fun Application.module() {
+    configureSerialization()
+    configureHTTP()
+    configureAdministration()
+    configureRouting()
+}
+
 

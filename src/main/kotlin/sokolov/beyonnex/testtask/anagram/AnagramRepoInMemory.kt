@@ -1,3 +1,5 @@
+package sokolov.beyonnex.testtask.anagram
+
 import kotlinx.collections.immutable.PersistentSet
 import kotlinx.collections.immutable.persistentSetOf
 import java.util.concurrent.ConcurrentHashMap
