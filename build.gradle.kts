@@ -11,7 +11,15 @@ repositories {
 }
 
 dependencies {
+    val kotestVersion = "5.7.1"
+
     testImplementation(kotlin("test"))
+
+    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
+    testImplementation("io.kotest:kotest-property:$kotestVersion")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5")
 }
 
 tasks.test {
@@ -19,9 +27,10 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(17)
 }
 
 application {
     mainClass.set("MainKt")
 }
+
