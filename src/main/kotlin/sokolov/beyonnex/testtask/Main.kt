@@ -1,9 +1,12 @@
 package sokolov.beyonnex.testtask
 
-import beyonnex.sokolov.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import sokolov.beyonnex.testtask.plugins.configureAdministration
+import sokolov.beyonnex.testtask.plugins.configureHTTP
+import sokolov.beyonnex.testtask.plugins.configureRouting
+import sokolov.beyonnex.testtask.plugins.configureSerialization
 
 /*
 Write a Java/Kotlin program that provides these 2 features:
@@ -25,15 +28,18 @@ Feel free to use your favorite:
 */
 
 fun main() {
-    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = Application::module)
+
+    val coreApp = CoreApp.create()
+
+    embeddedServer(Netty, port = 8080, host = "0.0.0.0", module = { this.module(coreApp) })
         .start(wait = true)
 }
 
-fun Application.module() {
+fun Application.module(coreApp: CoreApp) {
     configureSerialization()
     configureHTTP()
     configureAdministration()
-    configureRouting()
+    configureRouting(coreApp)
 }
 
 

@@ -1,4 +1,4 @@
-package beyonnex.sokolov.plugins
+package sokolov.beyonnex.testtask.plugins
 
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
