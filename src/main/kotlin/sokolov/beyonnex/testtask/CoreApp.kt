@@ -5,6 +5,8 @@ import sokolov.beyonnex.testtask.anagram.AnagramRepoInMemory
 import sokolov.beyonnex.testtask.anagram.AnagramSaver
 import sokolov.beyonnex.testtask.anagram.AnagramSaverFailFast
 
+// TODO: fix anagram detection when letters order the same and non-letters are different.
+
 class CoreApp(private val anagramSaver: AnagramSaver, private val anagramRepo: AnagramRepo) {
 
     companion object {

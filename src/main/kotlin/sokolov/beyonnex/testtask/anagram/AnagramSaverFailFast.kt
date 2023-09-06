@@ -14,7 +14,6 @@ class AnagramSaverFailFast(private val anagramRepo: AnagramRepo) : AnagramSaver 
         }
 
         rightText.forEach { letter ->
-            // TODO: filter out non letters
             val lowercase = letter.lowercaseChar()
             if (lowercase.isLetter()) {
                 val curr = countersMap.compute(lowercase) { _, curr ->
