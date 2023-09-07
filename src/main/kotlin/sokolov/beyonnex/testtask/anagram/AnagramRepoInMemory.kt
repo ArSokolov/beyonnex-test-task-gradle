@@ -9,7 +9,7 @@ class AnagramRepoInMemory : AnagramRepo {
 
     private val store: MutableMap<String, PersistentSet<String>> = ConcurrentHashMap()
 
-    // no additional verification cuz current scenario is only 1 use case and kinda optimized for that
+    // There is no additional validation because current scenario contains only 1 use case and we optimized for that.
     override fun save(anagrams: Collection<String>) {
         if (anagrams.size < 2) return
 
